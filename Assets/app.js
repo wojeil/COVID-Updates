@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 
 
 
@@ -40,3 +42,18 @@ function newsApiCall(countryCode) {
 //test news API function
 newsApiCall("us");
 
+
+//reach for dropdown button
+$("#search").on("click",function(){
+    event.preventDefault();
+    $("#drop").css("display","inline");
+})
+
+//drop down function
+
+    $("#drop").on("click",function(){
+       // event.preventDefault;
+
+    })
+
+})
