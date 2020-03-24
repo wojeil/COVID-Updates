@@ -40,3 +40,17 @@ function newsApiCall(countryCode) {
 //test news API function
 newsApiCall("us");
 
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://giphy.p.rapidapi.com/v1/gifs/search?q=italy&api_key=dc6zaTOxFJmzC",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "giphy.p.rapidapi.com",
+		"x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
