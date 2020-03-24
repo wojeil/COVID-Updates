@@ -3,4 +3,11 @@ header {
     padding: 30px;
     margin-bottom: 40px;
 }
+body {
+    background-image: url(memphis-mini-dark.png);
+}
+img {
+    height: 200px;
+    width: 50%;
+}
 
