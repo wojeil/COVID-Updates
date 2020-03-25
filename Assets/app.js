@@ -53,7 +53,7 @@ $(document).ready(function () {
 
         giphyAjax(country);
         coronaAjax(country);
-        newsApiCall(countryID);
+        newsAjax(countryID);
     })
     // Corona function
     function coronaAjax() {
