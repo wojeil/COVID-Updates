@@ -66,11 +66,13 @@ $(document).ready(function () {
             //Target Total Recovered:
             var totalRecovered= "Total Recovered: "+response.latest_stat_by_country[0].total_recovered;
             console.log(totalRecovered);
-
-            
-
-            //target empty div
-            // $("")
+            //Target h1 to place text for country name:
+            $(".title").text(countryName);
+            //Place the rest of the stats in li tags.
+            $("#li1").text(totalCases);
+            $("#li2").text(activeCases);
+            $("#li3").text(totalDeaths);
+            $("#li4").text(totalRecovered);
 
             });
         }
