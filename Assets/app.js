@@ -7,11 +7,11 @@ $(document).ready(function () {
         dropItems();
     });
 
-//reach for dropdown button
-    $("#searchTab").on("click",function(){
-        $("#drop").css("display","inline");
-    
-});
+    //reach for dropdown button
+    $("#searchTab").on("click", function () {
+        $("#drop").css("display", "inline");
+
+    });
 
 
 
@@ -26,53 +26,53 @@ $(document).ready(function () {
 
         })
 
-//drop down function
+        //drop down function
 
-    $("#dropDown").on("click",function(){
-       
-      var dropDown= $("#dropDown2");
+        $("#dropDown").on("click", function () {
 
-     dropDown.toggle("is-active");
-       
+            var dropDown = $("#dropDown2");
 
-    })
-//Targeting our countries
-
-$(".dropdown-item").on("click",function(){
-//    var countryText=  event.target.innerText()
-//    console.log
-//set country ID for News API
-    var countryID= $(this).data("country");
-//set country Name for Corona API
-    
-    var country =""
-    country= $(this).text().trim();
-    console.log(typeof country);
+            dropDown.toggle("is-active");
 
 
+        })
+        //Targeting our countries
 
-    alert(countryID + country);
-    function coronaAjax() {
-            
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": `https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${country}`,
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-                "x-rapidapi-key": "e4420810e6msh08ee16571aa2e63p11d2e6jsnc7f841440ab7"
+        $(".dropdown-item").on("click", function () {
+            //    var countryText=  event.target.innerText()
+            //    console.log
+            //set country ID for News API
+            var countryID = $(this).data("country");
+            //set country Name for Corona API
+
+            var country = ""
+            country = $(this).text().trim();
+            console.log(typeof country);
+
+
+
+            alert(countryID + country);
+            function coronaAjax() {
+
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": `https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${country}`,
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+                        "x-rapidapi-key": "e4420810e6msh08ee16571aa2e63p11d2e6jsnc7f841440ab7"
+                    }
+                }
+
+                $.ajax(settings).done(function (response) {
+                    console.log(JSON.parse(response));
+                });
             }
-        }
-    
-        $.ajax(settings).done(function (response) {
-            console.log(JSON.parse(response));
-        });
-    }
-    
-    
-    coronaAjax();
-})
+
+
+            coronaAjax();
+        })
 
 
 
@@ -128,28 +128,6 @@ $(".dropdown-item").on("click",function(){
     //function to append to news divs
     function appendNews(targetDivID, response) {
         var newsDiv = $("#" + targetDivID)
-
-// Corona function
-
-
-//function to get news response and append to page
-function newsApiCall(countryCode) {
-    //Key to access API
-    var newsAPIKey = "7df80f17ac7a4d13ae60f8308308d6f1";
-    //URL to get response from
-    var queryURL = "http://newsapi.org/v2/top-headlines?country=" + countryCode + "&category=general&apiKey=" + newsAPIKey;
-    //ajax call to news API to get data
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-        //console log the response object
-        console.log(response);
-        //target empty div to append to
-        var newsDiv1 = $("#news1");
-        //empty div before appending new articles
-        newsDiv1.empty();
-
         //make loop to put 2 random articles on the page 
         for (let index = 0; index < 2; index++) {
             //get a random article from array
@@ -176,23 +154,28 @@ function newsApiCall(countryCode) {
             $("#article-img" + index).wrap("<a href=" + response.articles[newsIndex].url + " target=\"_blank\"></a>");
         }
     }
-    //test news API function
-    // newsApiCall("us");
 
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://giphy.p.rapidapi.com/v1/gifs/search?q=italy&api_key=dc6zaTOxFJmzC",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "giphy.p.rapidapi.com",
-            "x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
+        // Corona function
+
+
+
+        //test news API function
+        // newsApiCall("us");
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://giphy.p.rapidapi.com/v1/gifs/search?q=italy&api_key=dc6zaTOxFJmzC",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "giphy.p.rapidapi.com",
+                "x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
+            }
         }
-    }
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    });
-})
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+    })
 
 
 
