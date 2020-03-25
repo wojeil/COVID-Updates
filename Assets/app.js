@@ -53,7 +53,7 @@ $(document).ready(function () {
 
         giphyAjax(country);
         coronaAjax(country);
-        newsApiCall(countryID);
+        newsAjax(countryID);
     })
     //function to get news response and append to page
     function newsAjax(countryCode) {
