@@ -10,14 +10,24 @@ $(document).ready(function () {
 
 
 //drop down function
-function dropItems(){
+
     $("#dropDown").on("click",function(){
-       alert("works");
+       
+      var dropDown= $("#dropDown2");
+
+     dropDown.toggle("is-active");
        
 
     })
+//Targeting our countries
+$(".dropdown-item").on("click",function(){
+    var country= $(this).data("country");
 
-};
+    alert(country);
+
+
+})
+
 
 
 // Corona function
