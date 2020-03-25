@@ -4,82 +4,56 @@ $(document).ready(function () {
     //reach for dropdown button
     $("#searchTab").on("click", function () {
         $("#drop").css("display", "inline");
-        dropItems();
     });
-
-    //reach for dropdown button
-    $("#searchTab").on("click", function () {
-        $("#drop").css("display", "inline");
-
-    });
-
-
-
-
 
 
     //drop down function
-    function dropItems() {
-        $("#dropDown").on("click", function () {
-            alert("works");
+
+    $("#dropDown").on("click", function () {
+
+        var dropDown = $("#dropDown2");
+
+        dropDown.toggle("is-active");
 
 
-        })
+    })
+    //Targeting our countries
 
-        //drop down function
+    $(".dropdown-item").on("click", function () {
+        //    var countryText=  event.target.innerText()
+        //    console.log
+        //set country ID for News API
+        var countryID = $(this).data("country");
+        //set country Name for Corona API
 
-        $("#dropDown").on("click", function () {
-
-            var dropDown = $("#dropDown2");
-
-            dropDown.toggle("is-active");
-
-
-        })
-        //Targeting our countries
-
-        $(".dropdown-item").on("click", function () {
-            //    var countryText=  event.target.innerText()
-            //    console.log
-            //set country ID for News API
-            var countryID = $(this).data("country");
-            //set country Name for Corona API
-
-            var country = ""
-            country = $(this).text().trim();
-            console.log(typeof country);
+        var country = ""
+        country = $(this).text().trim();
+        console.log(typeof country);
 
 
 
-            alert(countryID + country);
-            function coronaAjax() {
+        alert(countryID + country);
+        function coronaAjax() {
 
-                var settings = {
-                    "async": true,
-                    "crossDomain": true,
-                    "url": `https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${country}`,
-                    "method": "GET",
-                    "headers": {
-                        "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-                        "x-rapidapi-key": "e4420810e6msh08ee16571aa2e63p11d2e6jsnc7f841440ab7"
-                    }
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${country}`,
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+                    "x-rapidapi-key": "e4420810e6msh08ee16571aa2e63p11d2e6jsnc7f841440ab7"
                 }
-
-                $.ajax(settings).done(function (response) {
-                    console.log(JSON.parse(response));
-                });
             }
 
-
-            coronaAjax();
-        })
-
-
-
-    };
+            $.ajax(settings).done(function (response) {
+                console.log(JSON.parse(response));
+            });
+        }
 
 
-
+        coronaAjax();
+    })
     // Corona function
     function coronaAjax() {
         var country = "spain";
@@ -155,27 +129,27 @@ $(document).ready(function () {
         }
     }
 
-        // Corona function
+    // Corona function
 
 
 
-        //test news API function
-        // newsApiCall("us");
+    //test news API function
+    // newsApiCall("us");
 
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://giphy.p.rapidapi.com/v1/gifs/search?q=italy&api_key=dc6zaTOxFJmzC",
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "giphy.p.rapidapi.com",
-                "x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
-            }
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://giphy.p.rapidapi.com/v1/gifs/search?q=italy&api_key=dc6zaTOxFJmzC",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "giphy.p.rapidapi.com",
+            "x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
         }
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-        });
-    })
+    }
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+})
 
 
 
