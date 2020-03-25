@@ -107,16 +107,12 @@ $(document).ready(function () {
             $("#article-img" + index).wrap("<a href=" + response.articles[newsIndex].url + " target=\"_blank\"></a>");
         }
     }
-
-    // Corona function
-
-
-
     //test news API function
     // newsApiCall("us");
 
     //Ajax call for giphy api with specified country
     function giphyAjax(country) {
+        //settings for ajax call
         var settings = {
             "async": true,
             "crossDomain": true,
@@ -127,11 +123,20 @@ $(document).ready(function () {
                 "x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
             }
         }
+        //make ajax call
         $.ajax(settings).done(function (response) {
+            //console log the object
             console.log(response);
+            //get random gif from reponse
+            var randomGif = Math.floor(Math.random()*response.data.length);
+            //target gif div
+            var gifDiv = $("#gifSection");
+            //create an image with a url to gif
+            var gifImg = $("<img>").attr("src", response.data[randomGif].images.fixed_width_small.url);
+            gifDiv.append(gifImg);
         });
     }
-
+    giphyAjax("france");
 })
 
 
