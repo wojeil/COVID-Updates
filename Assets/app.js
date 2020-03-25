@@ -51,8 +51,9 @@ $(document).ready(function () {
             });
         }
 
-
-        coronaAjax();
+        giphyAjax(country);
+        coronaAjax(country);
+        newsApiCall(countryID);
     })
     // Corona function
     function coronaAjax() {
