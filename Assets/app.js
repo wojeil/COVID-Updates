@@ -1,24 +1,19 @@
 $(document).ready(function () {
 
 //reach for dropdown button
-function search(event){
     $("#searchTab").on("click",function(){
-    event.preventDefault();
-    var drop= $("#drop");
-    drop.css("display","intext");
-    
-})
+        $("#drop").css("display","inline");
+    dropItems();
+});
 
-};
-console.log(search);
+
 
 
 //drop down function
 function dropItems(){
     $("#dropDown").on("click",function(){
-       event.preventDefault();
-       var dropMenue = $(".dropdown-menu");
-       dropMenue.toggle("is-active");
+       alert("works");
+       
 
     })
 
