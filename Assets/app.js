@@ -20,10 +20,13 @@ $(document).ready(function () {
 
     })
 //Targeting our countries
-$(".dropdown-item").on("click",function(){
-    var country= $(this).data("country");
 
-    alert(country);
+$(".dropdown-item").on("click",function(){
+    var countryID= $(this).data("country");
+    var country= $(this).text();
+
+
+    alert(countryID + country);
 
 
 })
