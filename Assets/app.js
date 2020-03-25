@@ -31,8 +31,8 @@ $(document).ready(function () {
         console.log(typeof country);
 
 
-
-        alert(countryID + country);
+        //Alert to make sure it works
+       // alert(countryID + country);
         function coronaAjax() {
 
             var settings = {
@@ -45,9 +45,35 @@ $(document).ready(function () {
                     "x-rapidapi-key": "e4420810e6msh08ee16571aa2e63p11d2e6jsnc7f841440ab7"
                 }
             }
+            
 
+           
             $.ajax(settings).done(function (response) {
-                console.log(JSON.parse(response));
+                response=JSON.parse(response);
+                console.log(response);
+            //Target Country Name:
+            var countryName= response.country;
+            console.log(countryName);
+            //Target Total cases:
+            var totalCases= "Total Cases: "+response.latest_stat_by_country[0].total_cases;
+            console.log(totalCases);
+            //Target Acvtive cases:
+            var activeCases= "Total Active Cases: "+response.latest_stat_by_country[0].active_cases;
+            console.log(activeCases);
+            //Target Total Deaths:
+            var totalDeaths= "Total Deaths: "+response.latest_stat_by_country[0].total_deaths;
+            console.log(totalDeaths);
+            //Target Total Recovered:
+            var totalRecovered= "Total Recovered: "+response.latest_stat_by_country[0].total_recovered;
+            console.log(totalRecovered);
+            //Target h1 to place text for country name:
+            $(".title").text(countryName);
+            //Place the rest of the stats in li tags.
+            $("#li1").text(totalCases);
+            $("#li2").text(activeCases);
+            $("#li3").text(totalDeaths);
+            $("#li4").text(totalRecovered);
+
             });
         }
 
