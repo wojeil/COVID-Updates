@@ -1,4 +1,23 @@
+$(document).ready(function () {
 
+//reach for dropdown button
+    $("#searchTab").on("click",function(){
+        $("#drop").css("display","inline");
+    dropItems();
+});
+
+
+
+
+//drop down function
+function dropItems(){
+    $("#dropDown").on("click",function(){
+       alert("works");
+       
+
+    })
+
+};
 
 
 // Corona function
@@ -81,6 +100,17 @@ var settings = {
 	}
 }
 
+
+
+
+
+
+
+
+
+})
+
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
+
