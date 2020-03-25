@@ -31,8 +31,8 @@ $(document).ready(function () {
         console.log(typeof country);
 
 
-
-        alert(countryID + country);
+        //Alert to make sure it works
+       // alert(countryID + country);
         function coronaAjax() {
 
             var settings = {
@@ -45,9 +45,23 @@ $(document).ready(function () {
                     "x-rapidapi-key": "e4420810e6msh08ee16571aa2e63p11d2e6jsnc7f841440ab7"
                 }
             }
+            
 
+           
             $.ajax(settings).done(function (response) {
-                console.log(JSON.parse(response));
+                response=JSON.parse(response);
+               // console.log(JSON.parse(response));
+            //Target Country Name:
+            var countryName= response.country;
+            console.log(countryName);
+            //Target Total cases:
+            var totalCases= response.latest_stat_by_country[0].total_cases;
+            console.log(totalCases);
+            //Target Acvtive
+
+            //target empty div
+            // $("")
+
             });
         }
 
