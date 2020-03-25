@@ -50,14 +50,22 @@ $(document).ready(function () {
            
             $.ajax(settings).done(function (response) {
                 response=JSON.parse(response);
-               // console.log(JSON.parse(response));
+                console.log(response);
             //Target Country Name:
             var countryName= response.country;
             console.log(countryName);
             //Target Total cases:
             var totalCases= response.latest_stat_by_country[0].total_cases;
             console.log(totalCases);
-            //Target Acvtive
+            //Target Acvtive cases:
+            var activeCases= response.latest_stat_by_country[0].active_cases;
+            console.log(activeCases);
+            //Target Total Deaths:
+            var totalDeaths= response.latest_stat_by_country[0].total_deaths;
+            console.log(totalDeaths);
+            //Target Total Recovered:
+            var totalRecovered= "Total Recovered: "+response.latest_stat_by_country[0].total_recovered;
+            console.log(totalRecovered);
 
             //target empty div
             // $("")
