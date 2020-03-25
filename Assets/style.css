@@ -7,7 +7,7 @@ body {
     background-image: url(memphis-mini-dark.png);
 }
 img {
-    height: 200px;
+    height: 100%;
     width: 50%;
 }
 
