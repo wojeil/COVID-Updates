@@ -22,10 +22,16 @@ $(document).ready(function () {
 //Targeting our countries
 
 $(".dropdown-item").on("click",function(){
+//    var countryText=  event.target.innerText()
+//    console.log
 //set country ID for News API
     var countryID= $(this).data("country");
 //set country Name for Corona API
-    var country= $(this).text();
+    
+    var country =""
+    country= $(this).text().trim();
+    console.log(typeof country);
+
 
 
     alert(countryID + country);
