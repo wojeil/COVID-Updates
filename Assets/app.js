@@ -2,10 +2,10 @@ $(document).ready(function () {
 
 //reach for dropdown button
 function search(event){
-    $("#search").on("click",function(){
+    $("#searchTab").on("click",function(){
     event.preventDefault();
     var drop= $("#drop");
-    drop.css("display","none");
+    drop.css("display","intext");
     
 })
 
@@ -15,9 +15,10 @@ console.log(search);
 
 //drop down function
 function dropItems(){
-    $("#drop").on("click",function(){
+    $("#dropDown").on("click",function(){
        event.preventDefault();
-       
+       var dropMenue = $(".dropdown-menu");
+       dropMenue.toggle("is-active");
 
     })
 
