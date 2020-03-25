@@ -55,7 +55,7 @@ $(document).ready(function () {
         coronaAjax();
     })
     //function to get news response and append to page
-    function newsApiCall(countryCode) {
+    function newsAjax(countryCode) {
         //Key to access API
         var newsAPIKey = "7df80f17ac7a4d13ae60f8308308d6f1";
         //URL to get response from
@@ -115,19 +115,23 @@ $(document).ready(function () {
     //test news API function
     // newsApiCall("us");
 
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://giphy.p.rapidapi.com/v1/gifs/search?q=italy&api_key=dc6zaTOxFJmzC",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "giphy.p.rapidapi.com",
-            "x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
+    //Ajax call for giphy api with specified country
+    function giphyAjax(country) {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://giphy.p.rapidapi.com/v1/gifs/search?q=" + country + "&api_key=dc6zaTOxFJmzC",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "giphy.p.rapidapi.com",
+                "x-rapidapi-key": "b2eeb42632msh56f0876a19c19f7p13b09bjsnb3eb283f7657"
+            }
         }
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
     }
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    });
+
 })
 
 
