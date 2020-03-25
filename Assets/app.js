@@ -55,17 +55,19 @@ $(document).ready(function () {
             var countryName= response.country;
             console.log(countryName);
             //Target Total cases:
-            var totalCases= response.latest_stat_by_country[0].total_cases;
+            var totalCases= "Total Cases: "+response.latest_stat_by_country[0].total_cases;
             console.log(totalCases);
             //Target Acvtive cases:
-            var activeCases= response.latest_stat_by_country[0].active_cases;
+            var activeCases= "Total Active Cases: "+response.latest_stat_by_country[0].active_cases;
             console.log(activeCases);
             //Target Total Deaths:
-            var totalDeaths= response.latest_stat_by_country[0].total_deaths;
+            var totalDeaths= "Total Deaths: "+response.latest_stat_by_country[0].total_deaths;
             console.log(totalDeaths);
             //Target Total Recovered:
             var totalRecovered= "Total Recovered: "+response.latest_stat_by_country[0].total_recovered;
             console.log(totalRecovered);
+
+            
 
             //target empty div
             // $("")
