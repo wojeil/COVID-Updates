@@ -72,8 +72,8 @@ $(document).ready(function () {
             var newsDiv1 = "news1";
             var newsDiv2 = "news2";
             //empty div before appending new articles
-            // newsDiv1.empty();
-            // newsDiv2.empty();
+            $("#news1").empty();
+            $("#news2").empty();
             //call the append news function with targeted divs
             appendNews(newsDiv1, response);
             appendNews(newsDiv2, response);
@@ -89,19 +89,19 @@ $(document).ready(function () {
             //get the title
             var newsTitle = response.articles[newsIndex].title;
             //put title in h3
-            var titleHeader = $("<h3>").text(newsTitle);
+            var titleHeader = $("<h3>").text(newsTitle).addClass("news-header");
             //get author
             var newsAuthor = response.articles[newsIndex].author
             //put author name in a p
-            var authorP = $("<p>").text("Author: " + newsAuthor);
+            var authorP = $("<p>").text("Author: " + newsAuthor).addClass("news-author");
             //create image element
-            var newsImage = $("<img>").attr("id", "article-img" + index);
+            var newsImage = $("<img>").attr("id", "article-img" + index).addClass("news-image");
             //get image url 
             newsImage.attr("src", response.articles[newsIndex].urlToImage);
             //get description
             var newsDescription = response.articles[newsIndex].description;
             //put description in a p
-            var descriptionP = $("<p>").text("Description: " + newsDescription);
+            var descriptionP = $("<p>").text("Description: " + newsDescription).addClass("news-description");
             //append empty div on the page to put article
             newsDiv.append(titleHeader, authorP, newsImage, descriptionP);
             //add a link to the news article
@@ -129,15 +129,15 @@ $(document).ready(function () {
             //console log the object
             console.log(response);
             //get random gif from reponse
-            var randomGif = Math.floor(Math.random()*response.data.length);
+            var randomGif = Math.floor(Math.random() * response.data.length);
             //target gif div
             var gifDiv = $("#gifSection");
+            gifDiv.empty();
             //create an image with a url to gif
             var gifImg = $("<img>").attr("src", response.data[randomGif].images.fixed_width_small.url);
             gifDiv.append(gifImg);
         });
     }
-    giphyAjax("france");
 })
 
 
