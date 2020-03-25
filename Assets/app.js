@@ -1,6 +1,27 @@
 $(document).ready(function () {
 
+//reach for dropdown button
+function search(event){
+    $("#search").on("click",function(){
+    event.preventDefault();
+    var drop= $("#drop");
+    drop.css("display","none");
+    
+})
 
+};
+console.log(search);
+
+
+//drop down function
+function dropItems(){
+    $("#drop").on("click",function(){
+       event.preventDefault();
+       
+
+    })
+
+};
 
 
 // Corona function
@@ -43,17 +64,10 @@ function newsApiCall(countryCode) {
 newsApiCall("us");
 
 
-//reach for dropdown button
-$("#search").on("click",function(){
-    event.preventDefault();
-    $("#drop").css("display","inline");
-})
 
-//drop down function
 
-    $("#drop").on("click",function(){
-       // event.preventDefault;
 
-    })
+
+
 
 })
