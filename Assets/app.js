@@ -51,8 +51,9 @@ $(document).ready(function () {
             });
         }
 
-
-        coronaAjax();
+        giphyAjax(country);
+        coronaAjax(country);
+        newsApiCall(countryID);
     })
     //function to get news response and append to page
     function newsAjax(countryCode) {
