@@ -17,13 +17,7 @@ img {
 #virus:hover {
     transform: scaleX(-1);
 }
-<<<<<<< HEAD
-=======
-#drop {
-    display: none;
-}
 
->>>>>>> 7c49ff8d4006fd4e5f0c9787e5dfd33da679eb68
 .dropdown-menu{
     max-height:200px;
     overflow:auto;
@@ -44,7 +38,7 @@ img {
      color: #ffdd57;
      font-size: 20px;
  }
-<<<<<<< HEAD
+
  #call-to-action {
      color:#ffdd57;
      text-align: center;
@@ -59,10 +53,3 @@ img {
  }
  
  
- 
- 
- 
- 
-=======
-
->>>>>>> 7c49ff8d4006fd4e5f0c9787e5dfd33da679eb68

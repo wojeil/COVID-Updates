@@ -1,10 +1,5 @@
 $(document).ready(function () {
-
-
-    
-
-
-    //drop down function
+//drop down function
 
     $("#dropDown").on("click", function () {
 
