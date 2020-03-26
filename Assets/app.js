@@ -1,21 +1,13 @@
 $(document).ready(function () {
 
-
-    //reach for dropdown button
-    $("#searchTab").on("click", function () {
-        $("#drop").css("display", "inline");
-    });
+var dropDown = $("#dropDown2");
+dropDown.toggle("is-up");
 
 
     //drop down function
-
     $("#dropDown").on("click", function () {
-
-        var dropDown = $("#dropDown2");
-
+        
         dropDown.toggle("is-active");
-
-
     })
     //Targeting our countries
 
@@ -47,8 +39,7 @@ $(document).ready(function () {
             }
 
 
-
-            $.ajax(settings).done(function (response) {
+             $.ajax(settings).done(function (response) {
                 response = JSON.parse(response);
                 console.log(response);
                 //Target Country Name:
@@ -160,7 +151,7 @@ $(document).ready(function () {
             var gifDiv = $("#gifSection");
             gifDiv.empty();
             //create an image with a url to gif
-            var gifImg = $("<img>").attr("src", response.data[randomGif].images.fixed_width_small.url);
+            var gifImg = $("<img>").attr("src", response.data[randomGif].images.fixed_width_small.url).addClass("gify");
             gifDiv.append(gifImg);
         });
     }
