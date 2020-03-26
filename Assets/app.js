@@ -44,8 +44,7 @@ $(document).ready(function () {
             }
 
 
-
-            $.ajax(settings).done(function (response) {
+             $.ajax(settings).done(function (response) {
                 response = JSON.parse(response);
                 console.log(response);
                 //Target Country Name:
