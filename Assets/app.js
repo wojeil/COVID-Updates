@@ -1,13 +1,12 @@
 $(document).ready(function () {
 //drop down function
+var dropDown = $("#dropDown2");
+dropDown.toggle("is-up");
+
 
     $("#dropDown").on("click", function () {
-
-        var dropDown = $("#dropDown2");
-
+        
         dropDown.toggle("is-active");
-
-
     })
     //Targeting our countries
 
