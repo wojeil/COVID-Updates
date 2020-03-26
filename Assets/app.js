@@ -1,9 +1,10 @@
 $(document).ready(function () {
-//drop down function
+
 var dropDown = $("#dropDown2");
 dropDown.toggle("is-up");
 
 
+    //drop down function
     $("#dropDown").on("click", function () {
         
         dropDown.toggle("is-active");
