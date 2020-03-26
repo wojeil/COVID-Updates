@@ -1,3 +1,6 @@
+html {
+    height:100%
+}
 header {
     font-size: 60px;
     padding: 30px;
@@ -8,6 +11,7 @@ header {
 /* the whole body */
 body {
     background-image: url(memphis-mini-dark.png);
+    min-height: 100%;
 }
 /* for all images: */
 img {
@@ -25,11 +29,6 @@ img {
     overflow-x:hidden;
      
  }
- .footer {
-    color:white;
-    padding:20px;
-    margin-top: 100px;
- }
 .title{
     color: #ffdd57;
     font-size: 80px;
@@ -45,6 +44,20 @@ img {
     font-weight: bold;
     font-size: larger;
  }
+
+  .footer {
+    color:white;
+    text-align: center;
+    padding:20px;
+    margin-top: 100px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+ #news1,
+ #news2 {
+     margin-bottom: 150px;
+
 
  .gify{
      height: 100%;
