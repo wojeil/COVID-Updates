@@ -7,7 +7,7 @@ body {
     background-image: url(memphis-mini-dark.png);
 }
 img {
-    height: 100%;
+    
     width: 50%;
 }
 
@@ -16,9 +16,20 @@ img {
     
 }
 
- .dropdown-menu{
+.dropdown-menu{
     max-height:200px;
     overflow:auto;
     overflow-x:hidden;
      
+ }
+
+.title{
+    color: #ffdd57;
+    font-size: 80px;
+    /* font-style: ; */
+ }
+
+ .lI {
+     color: #ffdd57;
+     font-size: 20px;
  }
