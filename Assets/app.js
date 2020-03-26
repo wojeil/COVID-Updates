@@ -1,13 +1,13 @@
 $(document).ready(function () {
+
+var dropDown = $("#dropDown2");
+dropDown.toggle("is-up");
+
+
     //drop down function
-
     $("#dropDown").on("click", function () {
-
-        var dropDown = $("#dropDown2");
-
+        
         dropDown.toggle("is-active");
-
-
     })
     //Targeting our countries
 
@@ -39,8 +39,7 @@ $(document).ready(function () {
             }
 
 
-
-            $.ajax(settings).done(function (response) {
+             $.ajax(settings).done(function (response) {
                 response = JSON.parse(response);
                 console.log(response);
                 //Target Country Name:
