@@ -2,9 +2,11 @@ html {
     height:100%
 }
 header {
-    font-size: 40px;
+    font-size: 60px;
     padding: 30px;
     margin-bottom: 40px;
+    font-style: oblique;
+    font-family: serif;
 }
 /* the whole body */
 body {
@@ -42,6 +44,7 @@ img {
     font-weight: bold;
     font-size: larger;
  }
+
   .footer {
     color:white;
     text-align: center;
@@ -54,6 +57,14 @@ img {
  #news1,
  #news2 {
      margin-bottom: 150px;
+
+
+ .gify{
+     height: 100%;
+     width: 100%;
  }
- 
+
+
+
+
  
