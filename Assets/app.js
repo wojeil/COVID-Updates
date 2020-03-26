@@ -151,7 +151,7 @@ dropDown.toggle("is-up");
             var gifDiv = $("#gifSection");
             gifDiv.empty();
             //create an image with a url to gif
-            var gifImg = $("<img>").attr("src", response.data[randomGif].images.fixed_width_small.url);
+            var gifImg = $("<img>").attr("src", response.data[randomGif].images.fixed_width_small.url).addClass("gify");
             gifDiv.append(gifImg);
         });
     }
