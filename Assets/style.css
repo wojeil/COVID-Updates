@@ -29,6 +29,9 @@ img {
     overflow-x:hidden;
      
  }
+ .dropdown-content{
+    background-color: black;
+}
 .title{
     color: #ffdd57;
     font-size: 80px;
