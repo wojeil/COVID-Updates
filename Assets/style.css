@@ -3,20 +3,25 @@ header {
     padding: 30px;
     margin-bottom: 40px;
 }
+/* the whole body */
 body {
     background-image: url(memphis-mini-dark.png);
 }
+/* for all images: */
 img {
-    height: 200px;
+    border: 2px groove  #ffdd57;
+    border-radius: 8px;
     width: 50%;
 }
-
+/* Virus Image transform when mouse goes over*/
+#virus:hover {
+    transform: scaleX(-1);
+}
 #drop {
     display: none;
-    
 }
 
- .dropdown-menu{
+.dropdown-menu{
     max-height:200px;
     overflow:auto;
     overflow-x:hidden;
@@ -27,3 +32,13 @@ img {
     padding:20px;
     margin-top: 100px;
  }
+.title{
+    color: #ffdd57;
+    font-size: 80px;
+    /* font-style: ; */
+ }
+ .lI {
+     color: #ffdd57;
+     font-size: 20px;
+ }
+
