@@ -1,255 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVID-Updates</title>
-<!---style links-->
+    <!---style links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css">
     <link rel="stylesheet" href="Assets/style.css">
 </head>
+
 <body>
-<!--Header-->
-<div class= "columns  is-fluid is-mobile ">
-    <div class= "column">
-        <header class="has-text-danger has-text-centered has-text-weight-bold has-background-dark">COVID-Updates</h1></header>
-        <button type="button" class= "button is-warning is-medium is-outlined is-rounded is-fullwidth is-active" id="searchTab"> <i class="fas fa-lungs-virus">Click to Search</i> </button>
+    <!--Header-->
+    <div class="columns  is-fluid is-mobile ">
+        <div class="column">
+            <header class="has-text-danger has-text-centered has-text-weight-bold has-background-dark">COVID-Updates
+                </h1>
+            </header>
+            <button type="button" class="button is-warning is-medium is-outlined is-rounded is-fullwidth is-active"
+                id="searchTab"> <i class="fas fa-lungs-virus">Click to Search</i> </button>
+        </div>
     </div>
-</div>
-<!--hidden search section-->
+    <!--hidden search section-->
 
-<div class="columns is-mobile " id="drop"> 
-<section class="column 12 has-text-centered is-mobile ">
-    <div class="dropdown is-active">
-        <div class="dropdown-trigger" >
-          <button class="button  is-warning is-medium is-outlined " aria-haspopup="true" aria-controls="dropdown-menu" id="dropDown"><i class="fas fa-toilet-paper"></i>
-            <span>Select Country</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu  is-rounded"  role="menu" id="dropDown2">
-          <div class="dropdown-content ">
-            <button class="dropdown-item button is-warning is-inverted  has-text-centered" data-country="ar">
-                Argentina
-            </button>
-            <button class="dropdown-item button is-warning is-inverted  has-text-centered" data-country="au">
-                Australia
-            </button>
-            <button class="dropdown-item button is-warning is-inverted  has-text-centered" data-country="at">
-                Austria
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="be">
-                Belgium
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered"data-country="br">
-                Brazil
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="bg">
-                Bulgaria
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ca">
-                Canada
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="cn">
-                China
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="co">
-                Colombia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="cu">
-                Cuba
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="cz">
-                Czech Republic
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="eg">
-                Egypt
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="fr">
-                France
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="de">
-                Germany
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="gr">
-                Greece
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="hk">
-                Hong Kong
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="hu">
-                Hungary
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="in">
-                India
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="id">
-                Indonesia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ie">
-                Ireland
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="il">
-                Israel
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="it">
-                Italy
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="jp">
-                Japan
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="lv">
-                Latvia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="lt">
-                Lithuania
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="my">
-                Malaysia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="mx">
-                Mexico
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ma">
-                Morocco
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="nl">
-                Netherlands
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="nz">
-                New Zealand
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ng">
-                Nigeria
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="no">
-                Norway
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ph">
-                Philippines
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="pl">
-                Poland
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="pt">
-                Portugal
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ro">
-                Romania
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ru">
-                Russia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="sa">
-                Saudi Arabia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="rs">
-                Serbia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="sg">
-                Singapore
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="sk">
-                Slovakia
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="si">
-                Slovania
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="za">
-                South Africa
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="kr">
-                South Korea
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="se">
-                Sweden
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ch">
-                Switzerland
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="tw">
-                Taiwan
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="th">
-                Thailand
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="tr">
-                Turkey
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ae">
-                UAE
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ua">
-                Ukraine
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="gb">
-                United Kingdom
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="us">
-                United States
-            </button>
-            <button class="dropdown-item button is-warning  is-inverted has-text-centered" data-country="ve">
-                Venuzuela
-            </button>
+    <div class="columns is-mobile " id="drop">
+        <section class="column 12 has-text-centered is-mobile ">
+            <div class="dropdown is-active">
+                <div class="dropdown-trigger">
+                    <button class="button  is-warning is-medium is-outlined " aria-haspopup="true"
+                        aria-controls="dropdown-menu" id="dropDown"><i class="fas fa-toilet-paper"></i>
+                        <span>Select Country</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="dropdown-menu  is-rounded" role="menu" id="dropDown2">
+                    <div class="dropdown-content ">
+                        <button class="dropdown-item button is-warning is-inverted  has-text-centered"
+                            data-country="ar">
+                            Argentina
+                        </button>
+                        <button class="dropdown-item button is-warning is-inverted  has-text-centered"
+                            data-country="au">
+                            Australia
+                        </button>
+                        <button class="dropdown-item button is-warning is-inverted  has-text-centered"
+                            data-country="at">
+                            Austria
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="be">
+                            Belgium
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="br">
+                            Brazil
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="bg">
+                            Bulgaria
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ca">
+                            Canada
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="cn">
+                            China
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="co">
+                            Colombia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="cu">
+                            Cuba
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="cz">
+                            Czech Republic
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="eg">
+                            Egypt
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="fr">
+                            France
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="de">
+                            Germany
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="gr">
+                            Greece
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="hk">
+                            Hong Kong
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="hu">
+                            Hungary
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="in">
+                            India
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="id">
+                            Indonesia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ie">
+                            Ireland
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="il">
+                            Israel
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="it">
+                            Italy
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="jp">
+                            Japan
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="lv">
+                            Latvia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="lt">
+                            Lithuania
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="my">
+                            Malaysia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="mx">
+                            Mexico
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ma">
+                            Morocco
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="nl">
+                            Netherlands
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="nz">
+                            New Zealand
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ng">
+                            Nigeria
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="no">
+                            Norway
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ph">
+                            Philippines
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="pl">
+                            Poland
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="pt">
+                            Portugal
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ro">
+                            Romania
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ru">
+                            Russia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="sa">
+                            Saudi Arabia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="rs">
+                            Serbia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="sg">
+                            Singapore
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="sk">
+                            Slovakia
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="si">
+                            Slovania
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="za">
+                            South Africa
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="kr">
+                            South Korea
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="se">
+                            Sweden
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ch">
+                            Switzerland
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="tw">
+                            Taiwan
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="th">
+                            Thailand
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="tr">
+                            Turkey
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ae">
+                            UAE
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ua">
+                            Ukraine
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="gb">
+                            United Kingdom
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="us">
+                            United States
+                        </button>
+                        <button class="dropdown-item button is-warning  is-inverted has-text-centered"
+                            data-country="ve">
+                            Venuzuela
+                        </button>
 
 
-           
-          </div>
-        </div>
-      </div>
 
+                    </div>
+                </div>
+            </div>
 
-</section>
-</div>  
-
-
-<!--Row 1--> 
-<div class=" columns is-fluid is-mobile">
-    <section class= " column hero is-8">
-        <div class="container is-fluid" id="statBoard">
-            <h1 class ="title"></h1>
-            <ul>
-                <li class="lI" id="li1"></li>
-                <li class="lI" id="li2"></li>
-                <li class="lI" id="li3"></li>
-                <li class="lI" id="li4"></li>
-            </ul>
-<!--place the country and covid 19 stats-->
-        </div>
-
-    </section>
-<!--Image -->
-    <section class=" column is-4">
-        <img src="https://cdn.aarp.net/content/dam/aarp/health/conditions_treatments/2020/02/1140-corona-virus-image.imgcache.revc0f724c550d0ba7ac44ffc0245fb30f4.web.jpg" alt="Picture of virus" id="virus">
-    </section>
-</div>
-
-<!--For bottom half of the page-->
-<Section class= "container is-fluid is-mobile">
-<!--Row 2 -->
-    <div class = "columns is-mobile">
-<!--Col 1-->
-        <section class="column is-5" id="news1">
 
         </section>
-<!--Col 2-->
-        <section class="column is-2" id="gifSection">
-
-        </section>
-<!--Col 3-->
-        <section class="column is-5" id="news2">
-            
-        </section>
-
     </div>
 
-</Section>
- 
-<!---Scripts--->
-<script src="https://kit.fontawesome.com/00ee417d1c.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="Assets/app.js"></script>
+
+    <!--Row 1-->
+    <div class=" columns is-fluid is-mobile">
+        <section class=" column hero is-8">
+            <div class="container is-fluid" id="statBoard">
+                <h1 class="title"></h1>
+                <ul>
+                    <li class="lI" id="li1"></li>
+                    <li class="lI" id="li2"></li>
+                    <li class="lI" id="li3"></li>
+                    <li class="lI" id="li4"></li>
+                </ul>
+                <!--place the country and covid 19 stats-->
+            </div>
+
+        </section>
+        <!--Image -->
+        <section class=" column is-4">
+            <img src="https://cdn.aarp.net/content/dam/aarp/health/conditions_treatments/2020/02/1140-corona-virus-image.imgcache.revc0f724c550d0ba7ac44ffc0245fb30f4.web.jpg"
+                alt="Picture of virus" id="virus">
+        </section>
+    </div>
+
+    <!--For bottom half of the page-->
+    <Section class="container is-fluid is-mobile">
+        <!--Row 2 -->
+        <div class="columns is-mobile">
+            <!--Col 1-->
+            <section class="column is-5" id="news1">
+
+            </section>
+            <!--Col 2-->
+            <section class="column is-2" id="gifSection">
+
+            </section>
+            <!--Col 3-->
+            <section class="column is-5" id="news2">
+
+            </section>
+
+        </div>
+
+    </Section>
+
+    <!---Scripts--->
+    <script src="https://kit.fontawesome.com/00ee417d1c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="Assets/app.js"></script>
 </body>
+
 </html>
