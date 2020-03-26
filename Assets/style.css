@@ -3,12 +3,22 @@ header {
     padding: 30px;
     margin-bottom: 40px;
 }
+/* the whole body */
 body {
     background-image: url(memphis-mini-dark.png);
 }
+/* for all images: */
 img {
-    
+    border: 2px groove  #ffdd57;
+    border-radius: 8px;
     width: 50%;
+}
+/* Virus Image transform when mouse goes over*/
+#virus:hover {
+    transform: scaleX(-1);
+    
+
+
 }
 
 #drop {
