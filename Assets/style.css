@@ -16,27 +16,35 @@ img {
 /* Virus Image transform when mouse goes over*/
 #virus:hover {
     transform: scaleX(-1);
-    
-
-
 }
+<<<<<<< HEAD
+=======
+#drop {
+    display: none;
+}
+
+>>>>>>> 7c49ff8d4006fd4e5f0c9787e5dfd33da679eb68
 .dropdown-menu{
     max-height:200px;
     overflow:auto;
     overflow-x:hidden;
      
  }
-
+ .footer {
+    color:white;
+    padding:20px;
+    margin-top: 100px;
+ }
 .title{
     color: #ffdd57;
     font-size: 80px;
     /* font-style: ; */
  }
-
  .lI {
      color: #ffdd57;
      font-size: 20px;
  }
+<<<<<<< HEAD
  #call-to-action {
      color:#ffdd57;
      text-align: center;
@@ -55,3 +63,6 @@ img {
  
  
  
+=======
+
+>>>>>>> 7c49ff8d4006fd4e5f0c9787e5dfd33da679eb68
