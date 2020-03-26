@@ -59,12 +59,10 @@ img {
  #news1,
  #news2 {
      margin-bottom: 150px;
-   #news1, #news2 {
     color: black;
     background-color: lightgrey;
     border-radius: 10px;
-
- }
+}
  .gify{
      height: 100%;
      width: 100%;
