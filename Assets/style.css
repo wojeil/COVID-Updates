@@ -17,10 +17,6 @@ img {
 #virus:hover {
     transform: scaleX(-1);
 }
-#drop {
-    display: none;
-}
-
 .dropdown-menu{
     max-height:200px;
     overflow:auto;
@@ -40,5 +36,11 @@ img {
  .lI {
      color: #ffdd57;
      font-size: 20px;
+ }
+ #call-to-action {
+    color:#ffdd57;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
  }
 

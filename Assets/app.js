@@ -1,12 +1,4 @@
 $(document).ready(function () {
-
-
-    //reach for dropdown button
-    $("#searchTab").on("click", function () {
-        $("#drop").css("display", "inline");
-    });
-
-
     //drop down function
 
     $("#dropDown").on("click", function () {
