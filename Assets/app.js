@@ -77,7 +77,7 @@ dropDown.toggle("is-up");
         //Key to access API
         var newsAPIKey = "7df80f17ac7a4d13ae60f8308308d6f1";
         //URL to get response from
-        var queryURL = "http://newsapi.org/v2/top-headlines?country=" + countryCode + "&category=general&apiKey=" + newsAPIKey;
+        var queryURL = "https://newsapi.org/v2/top-headlines?country=" + countryCode + "&category=general&apiKey=" + newsAPIKey;
         //ajax call to news API to get data
         $.ajax({
             url: queryURL,
