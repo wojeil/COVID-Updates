@@ -1,5 +1,7 @@
 $(document).ready(function () {
-
+//Globals
+//variable to give each image an individual id
+var imageID = 0;
 var dropDown = $("#dropDown2");
 dropDown.toggle("is-up");
 
@@ -99,6 +101,8 @@ dropDown.toggle("is-up");
     //function to append to news divs
     function appendNews(targetDivID, response) {
         var newsDiv = $("#" + targetDivID)
+        //set background color to grey for articles
+        newsDiv.css("background-color","lightgrey");
         //make loop to put 2 random articles on the page 
         for (let index = 0; index < 2; index++) {
             //get a random article from array
@@ -112,7 +116,7 @@ dropDown.toggle("is-up");
             //put author name in a p
             var authorP = $("<p>").text("Author: " + newsAuthor).addClass("news-author");
             //create image element
-            var newsImage = $("<img>").attr("id", "article-img" + index).addClass("news-image");
+            var newsImage = $("<img>").attr("id", "article-img" + imageID).addClass("news-image");
             //get image url 
             newsImage.attr("src", response.articles[newsIndex].urlToImage);
             //get description
@@ -122,7 +126,9 @@ dropDown.toggle("is-up");
             //append empty div on the page to put article
             newsDiv.append(titleHeader, authorP, newsImage, descriptionP);
             //add a link to the news article
-            $("#article-img" + index).wrap("<a href=" + response.articles[newsIndex].url + " target=\"_blank\"></a>");
+            $("#article-img" + imageID).wrap("<a href=" + response.articles[newsIndex].url + " target=\"_blank\"></a>");
+            //change image id for next loop
+            imageID++;
         }
     }
     //test news API function
