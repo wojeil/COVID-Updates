@@ -21,7 +21,7 @@ dropDown.toggle("is-up");
         var country = ""
         country = $(this).text().trim();
         console.log(typeof country);
-
+        dropDown.toggle("is-up");
 
         //Alert to make sure it works
         // alert(countryID + country);
@@ -64,13 +64,15 @@ dropDown.toggle("is-up");
                 $("#li2").text(activeCases);
                 $("#li3").text(totalDeaths);
                 $("#li4").text(totalRecovered);
-
+                
             });
+            
         }
 
         giphyAjax(country);
         coronaAjax(country);
         newsAjax(countryID);
+        
     })
     //function to get news response and append to page
     function newsAjax(countryCode) {
