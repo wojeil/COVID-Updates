@@ -99,6 +99,9 @@ dropDown.toggle("is-up");
     //function to append to news divs
     function appendNews(targetDivID, response) {
         var newsDiv = $("#" + targetDivID)
+        //set background color to grey for articles
+        newsDiv.css("background-color","lightgrey");
+        //variable to give each image an individual id
         //make loop to put 2 random articles on the page 
         for (let index = 0; index < 2; index++) {
             //get a random article from array
