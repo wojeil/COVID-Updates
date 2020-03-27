@@ -58,6 +58,7 @@ img {
  }
  #news1,
  #news2 {
+     margin-top: 20px;
      margin-bottom: 150px;
     color: black;
     border-radius: 10px;
@@ -66,6 +67,26 @@ img {
      height: 100%;
      width: 100%;
  }
+
+ .news-header {
+     font-size: 25px;
+     font-family: serif;
+     font-weight: bold;
+ }
+
+.news-description {
+    margin-top: 12px;
+    margin-bottom: 15px;
+    font-family: serif;
+    font-size: 18px;
+}
+
+.news-author {
+    margin-bottom: 5px;
+    font-family: serif;
+    font-size: 20px;
+}
+
 
 
 
