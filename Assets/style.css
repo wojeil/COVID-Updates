@@ -58,6 +58,7 @@ img {
  }
  #news1,
  #news2 {
+     margin-top: 20px;
      margin-bottom: 150px;
     color: black;
     background-color: lightgrey;
@@ -67,6 +68,7 @@ img {
      height: 100%;
      width: 100%;
  }
+
 
 
 
