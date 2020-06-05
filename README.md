@@ -1,6 +1,6 @@
 # COVID-Updates
 
-<img src= (https://user-images.githubusercontent.com/60321934/82580850-bfc76100-9b5d-11ea-9ad8-3bb3a71708f5.png) width="100" height="100">
+<img src= "./Assets/appImage.png" width="350" height="200">
 
 Project Title
 The purpose of this app is to give the user a convenient site
@@ -13,6 +13,9 @@ page.
 
 Deployment
 GitHub
+
+Try Me Live
+<a href="https://wojeil.github.io/COVID-Updates/">https://wojeil.github.io/COVID-Updates/</a>
 
 Built With
 HTML5
